@@ -1,0 +1,210 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="language" content="en" />
+	
+	<title>One Love Bodywork - Your four hands massage specialists</title>
+		
+	<script type="text/javascript">
+	$(document).ready(function(){	
+		var draping = new Array();
+		draping[0] = "";
+		draping[0] = "We use a full sheet.";
+		draping[1] = "We use a sarong.";
+		draping[2] = "We use a small towel to drape the pelvic region.";
+		$(function() {
+			$("#booking").tabs();
+			$( "#date" ).datepicker({
+				inline: true
+			});			
+			$("select option").attr( "title", "" );
+   	 		$("#draping option").each(function(i){
+      			this.title = draping[i];
+    		})
+    		//$("#draping option").tooltip({ show: { effect: "blind", duration: 800 } }, {track: true});
+    		$("#draping option").tooltip({position: {my: "left+5 bottom", at: "right top", collision: "flipfit" }});
+    		//$("#basic_info label").last().css('font-style', 'italic');
+    		
+    					
+		});
+	 });
+	</script>
+</head>
+
+<body>
+
+<div id="booking">	
+	<ul>
+		<li><a href="#booking-1">Request a Reservation</a></li>
+	</ul>
+	<br>
+	<p class="directions">Please supply the information requested below. <span style="color:red">All fields are required.</span></p>
+	<div id="validation_errors" class="ui-corner-all">
+		</div><!-- validation_errors -->
+	
+	<form action="http://localhost/index.php/main/booking/create" method="post" accept-charset="utf-8">	
+	<div id="basic_info">
+		<div>
+			<label for="first_name">First Name: </label><br>
+			<input type="text" name="first_name" value=""  />
+		</div>
+		<div>
+			<label for="last_name">Last Name: </label><br>
+			<input type="text" name="last_name" value=""  />
+		</div>
+		<div>
+			<label for="phone">Telephone: </label><br>
+			<input type="text" name="phone" value=""  />
+		</div>
+		<div>
+			<label for="email">Email: </label><br>
+			<input type="text" name="email" value="" id="email" size="27"  />
+		</div>
+		<div>
+			<label for="date">Date: </label><br>
+			<input type="text" name="date" value="" id="date" size="20"  />
+		</div>
+		<div>
+			<label for="time">Time Window:</label><br>
+			<select name="time">
+				<option value="0">09:00am - 12:00pm</option>
+				<option value="1">10:00am - 01:00pm</option>
+				<option value="2">11:00am - 02:00pm</option>
+				<option value="3">12:00pm - 03:00pm</option>
+				<option value="4">01:00pm - 04:00pm</option>
+				<option value="5">02:00pm - 05:00pm</option>
+				<option value="6">03:00pm - 06:00pm</option>
+				<option value="7">04:00pm - 07:00pm</option>
+				<option value="8">05:00pm - 08:00pm</option>
+				<option value="9">06:00pm - 09:00pm</option>
+			</select>
+		</div>
+		<div style="display:block;float:none;clear:both;">
+			<label for="location">Location: </label><br>
+			<input type="radio" name="location" value="0" class="radios"  />In-call @ <a href="http://www.educatinghands.com/">Educating Hands Professional Clinic</a>, 3883 Biscayne Blvd, Miami FL 33137 <span style="color:green">(additional $20)</span><br>
+			<input type="radio" name="location" value="1" class="radios"  />Out-call @ <label for="address">Street Address: </label><input type="text" name="address" value="" size="73"  />
+		</div>
+		<div style="display:block;float:none;clear:both;">
+			<label for="type">Type of Service: </label><br>
+			<input type="radio" name="type" value="0" id="type" class="radios"  />Four Hands &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<select name="four_service">
+				<option value="0">Calm Body, Calm Mind (Swedish), 60 minutes, $180</option>
+				<option value="1">Calm Body, Calm Mind (Swedish), 90 minutes, $250</option>
+				<option value="2">Calm Body, Calm Mind (Swedish), 120 minutes, $350</option>
+				<option value="3">Desktop Hunch (Neck &amp; Shoulders), 60 minutes, $180</option>
+				<option value="4">Make It Hurt So Good (Deep Tissue), 60 minutes, $200</option>
+				<option value="5">Make It Hurt So Good (Deep Tissue), 90 minutes, $260</option>
+				<option value="6">Make It Hurt So Good (Deep Tissue), 120 minutes, $360</option>
+				<option value="7">Oh, My Back! (Lower Back), 60 minutes, $180</option>
+				<option value="8">Stiletto Blues (Calves &amp; Feet), 60 minutes, $180</option>
+				<option value="9">Stretch It Out (Sports Massage), 60 minutes, $220</option>
+				<option value="10">Stretch It Out (Sports Massage), 90 minutes, $300</option>
+				<option value="11">Stretch It Out (Sports Massage), 120 minutes, $400</option>
+				<option value="12">Tandem Hands &amp; Feet Reflexology, 60 minutes, $180</option>
+			</select><br>
+			<input type="radio" name="type" value="1" class="radios"  />Single Therapist 
+			<select name="two_service">
+				<option value="0">Calm Body, Calm Mind (Swedish), 60 minutes, $90</option>
+				<option value="1">Calm Body, Calm Mind (Swedish), 90 minutes, $125</option>
+				<option value="2">Calm Body, Calm Mind (Swedish), 120 minutes, $175</option>
+				<option value="3">Cicatrix Fix (Scar Treatment), 60 minutes, $120</option>
+				<option value="4">Desktop Hunch (Neck &amp; Shoulders), 60 minutes, $90</option>
+				<option value="5">Forever By Your Side (Couple's Massage), 60 minutes, $220</option>
+				<option value="6">Forever By Your Side (Couple's Massage), 90 minutes, $300</option>
+				<option value="7">Forever By Your Side (Couple's Massage), 120 minutes, $400</option>
+				<option value="8">Make It Hurt So Good (Deep Tissue), 60 minutes, $100</option>
+				<option value="9">Make It Hurt So Good (Deep Tissue), 90 minutes, $130</option>
+				<option value="10">Make It Hurt So Good (Deep Tissue), 120 minutes, $180</option>
+				<option value="11">Oh, My Back! (Lower Back), 60 minutes, $90</option>
+				<option value="12">Stiletto Blues (Calves &amp; Feet), 60 minutes, $90</option>
+				<option value="13">Stretch It Out (Sports Massage), 60 minutes, $110</option>
+				<option value="14">Stretch It Out (Sports Massage), 90 minutes, $150</option>
+				<option value="15">Stretch It Out (Sports Massage), 120 minutes, $200</option>
+				<option value="16">Tandem Hands &amp; Feet Reflexology, 60 minutes, $90</option>
+				<option value="17">The Josephine Stedman, 60 minutes, $100</option>
+				<option value="18">The Josephine Stedman, 90 minutes, $140</option>
+				<option value="19">The Josephine Stedman, 120 minutes, $175</option>
+				<option value="20">The Julian Sutherland, 60 minutes, $100</option>
+				<option value="21">The Julian Sutherland, 90 minutes, $140</option>
+				<option value="22">They Feel So Real! (Breast Augmentation), 60 minutes, $120</option>
+			</select>
+		</div>
+		<div style="display:block;float:none;clear:both;">
+			<label for="type">Method of Payment: </label><br>
+			<input type="radio" name="payment" value="0" class="radios"  />Cash<br>
+			<input type="radio" name="payment" value="1" class="radios"  />Credit/Debit card (<span style="color:green">3% service fee</span>)
+		</div>
+		<br>	
+	</div><!-- basic_info -->
+	
+	<p class="directions">Please customize your service from the options below.</p>
+	<div id="customizations">
+		<div>
+			<label for="aromatherapy">Aromatherapy Preference: </label><br>
+			<select name="aromatherapy">
+				<option value="0">Eucalyptus</option>
+				<option value="1">Lavender</option>
+				<option value="2">Lemon Drop</option>
+				<option value="3">Lemongrass</option>
+				<option value="4">Peppermint</option>
+				<option value="5">Rose</option>
+				<option value="6">Rosemary</option>
+			</select> 
+		</div>
+		<div>
+			<label for="music">Music Preference: </label><br>
+			<select name="music">
+				<option value="0">90s R&amp; B</option>
+				<option value="1">Afrobeat</option>
+				<option value="2">Classical</option>
+				<option value="3">Country</option>
+				<option value="4">Hip Hop</option>
+				<option value="5">Indie</option>
+				<option value="6">Jazz</option>
+				<option value="7">Meditative</option>
+				<option value="8">New Age</option>
+				<option value="9">Reggae</option>
+				<option value="10">Soft Vocals</option>
+				<option value="11">Soul</option>
+				<option value="12">World</option>
+			</select> 
+		</div>
+		<div> 
+			<label for="draping">Draping Preference: </label><br>
+			<select name="draping" id="draping">
+				<option value="0">Full</option>
+				<option value="1">Light</option>
+				<option value="2">Minimal</option>
+			</select>
+		</div>
+		<div style="display:block;clear:both;margin:5px 0px 15px 60px;"> 
+			<input type="checkbox" name="paraffin" value="1"/>
+			<label for="paraffin"> Add paraffin treatment ($20)</label>
+		</div>	
+	</div><!-- customizations -->
+	
+	<br>
+	<p class="directions"> If you have skin allergies or sensitive skin we recommend our hypoallergenic options. </p>
+	<div id="allergy_info">
+		<div>
+			<input type="radio" name="allergies" value="0" class="radios"  />
+			<label for="allergies">Please use hypoallergenic products.</label><br>
+			<input type="radio" name="allergies" value="1" class="radios"  />
+			<label for="allergies">Regular products are fine.</label>
+		</div><br>	
+	</div><!-- allergy_info -->
+	
+	<p class="directions">Special Requests:</p>
+	<div id="notes">
+		<p><textarea name="requests" cols="70" rows="2" ></textarea></p>	
+	</div>
+	
+	<br>
+	
+	<div id="submit_button">
+		<p><input type="submit" name="booking_submit" value="Request Reservation"  /> </p>
+	</div><!-- submit_button -->
+	
+	</form>	
+	
+</div><!-- booking -->

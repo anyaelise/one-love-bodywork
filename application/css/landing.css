@@ -1,0 +1,97 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	font: normal 10pt Arial,Helvetica,sans-serif;
+	background: url(pagebg.JPG);
+	background-size:cover;
+	/*height: 100%;*/
+}
+
+#page
+{
+	width: 570px;
+	margin: 30px auto;
+	/*margin-left: 200px;*/
+	margin-top: 100px;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	background-color: rgba(205,201,201,0.3);
+	border: 1px solid #8b8989;
+	border-radius: 10px;
+}
+
+#header
+{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#logo
+{
+	display: block;
+	width:550px;
+	margin: auto;
+	padding-bottom: 22px;
+}
+
+#menu 
+{
+	width: 450px;
+	margin-top: 0px;
+	margin-left: auto;	
+	margin-right: auto;
+	margin-bottom: 20px;
+	padding-top: 2px;
+	background: url(greenbg.png) 80% 30% repeat-x;
+	border: 0px white;
+	/*border: 1px solid #8b8989;*/
+	border-radius: 15px;
+	/*box-shadow: 0 0 1px #888;*/
+}
+
+#menu ul 
+{
+	-webkit-padding-start: 30px;
+	-moz-padding-start: 30px;
+	margin:auto;
+}
+
+#menu ul li
+{
+	display: inline;
+	padding-top: 5px;
+}
+
+#menu ul li a
+{
+	color:#ddd;
+	background-color:transparent;
+	font-family:Garamond;
+	font-size:20px;
+	/*font-weight: bold;*/
+	text-decoration:none;
+	padding: 2px 15px 0px 10px;	
+	/*text-shadow: 1px 1px #555;*/
+}
+
+#menu ul li a:hover 
+{
+	/*color:#E580FF;
+	text-decoration:underline;*/
+	background-color: rgba(255,255,255,0.4);
+}
+
+#footer
+{
+	clear: both;
+	margin: 10px;
+	padding-top: 30px;
+	font-size: 0.8em;
+	text-align: center;
+}
+
+.shadow {
+	 box-shadow: 0 0 5px #B3B3B3; 
+}
